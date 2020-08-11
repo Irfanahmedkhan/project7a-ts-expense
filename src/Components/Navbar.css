@@ -1,0 +1,17 @@
+.navbar-container {
+    width: 90%;
+    height: 15%;
+    background-color: brown;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+.link {
+    background-color: white;
+    margin: 5px;
+}

@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Dashboard from './Components/Dashboard'
+import { Routes, Route } from "react-router-dom";
+import { GlobalContextProvider } from './Context/GlobalState';
 
-function App() {
+
+import Balance from "./Components/Balance";
+import Transactions from "./Components/Transactions";
+import Chart from "./Components/Chart";
+import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
+import AddTransactions from "./Components/AddTransactions";
+
+
+function App(): JSX.Element  {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <GlobalContextProvider>
+
+<div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/Balance" element={<Balance />} />
+          <Route path="/AddTransactions" element={<AddTransactions />} />
+          <Route path="/Transactions" element={<Transactions />} />
+          <Route path="/Chart" element={<Chart />} />
+        </Routes>
+
+        <Footer />    
     </div>
+    </GlobalContextProvider>
   );
 }
 

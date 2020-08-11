@@ -1,0 +1,19 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;
+    width: 90%;
+    height: 80%;
+}
+
+.balance {
+    width: 80%;
+    height: 30%;
+    background-color: deepskyblue;
+}
+
+.transactions {
+    width: 80%;
+    height: 70%;
+    background-color: rgb(115, 255, 0);
+}
