@@ -1,19 +1,33 @@
 .dashboard-container {
     display: flex;
     flex-direction: column;
-    background-color: blueviolet;
+    width: 100%;
+    align-items: center;
+}
+
+.balance-div {
     width: 90%;
-    height: 80%;
+    min-height: 220px;
 }
 
-.balance {
-    width: 80%;
-    height: 30%;
-    background-color: deepskyblue;
+.chart-div {
+    width: 100%;
+    min-height: 200px;
 }
 
-.transactions {
-    width: 80%;
-    height: 70%;
-    background-color: rgb(115, 255, 0);
+.transaction-div {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn {
+    position: relative;
+    bottom: 230px;
+    right: -140px;
+    width: 10%;
+    border-radius: 50%;
+    padding: 10px;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 1px 4px 3px 1px rgba(0, 0, 0, 3);
 }

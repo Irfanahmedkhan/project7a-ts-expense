@@ -19,13 +19,12 @@ export const GlobalContextProvider = ({ children}: any) : JSX.Element => {
 
     const [Transactions, setTransactions] = useState<any>([])
 
+   
+
     function addTransactions(TransactionDetail: string, TransactionAmount: number) {
         setTransactions([...Transactions, { TransactionDetail, TransactionAmount, id: uuidv4(), date: new Date().getTime(), }]);
     }
     
-
-
-    // console.log(Transactions);
 
 
 

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Slim&display=swap');
+    .inc-exp-container {
+        height: 50%;
+        letter-spacing: 2px;
+        padding-top: 5px;
+        font-family: 'Nova Slim', cursive;
+    }
+    .income {
+        color: white;
+        padding: 10px;
+        background-color: #389760;
+        border-radius: 5px;
+        min-width: 90%;
+        margin: 5px;
+    }
+    .expense {
+        color: white;
+        padding: 10px;
+        background-color: #ec9b4e;
+        border-radius: 5px;
+        min-width: 90%;
+        margin: 5px;
+    }
+    span {
+        float: right;
+        font-weight: 600;
+    }

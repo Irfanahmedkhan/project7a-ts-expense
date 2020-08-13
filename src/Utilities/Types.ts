@@ -5,6 +5,7 @@ export type TransType = {
     TransactionDetail: string | number;
     TransactionAmount: number;
     
+    
 };
 
 export type StateType = { 

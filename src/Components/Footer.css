@@ -1,6 +1,19 @@
 .footer-container {
-    width: 90%;
+    display: flex;
+    justify-content: center;
+    width: 350px;
     height: 5%;
-    background-color: darkolivegreen;
-}
 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    text-align: center;
+    
+    background-color: rgb(19, 57, 114);
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: white;
+    
+}

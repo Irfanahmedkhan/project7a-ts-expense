@@ -4,13 +4,13 @@ import Dashboard from './Components/Dashboard'
 import { Routes, Route } from "react-router-dom";
 import { GlobalContextProvider } from './Context/GlobalState';
 
-
+import TransactionList from "./Components/TransactionList";
+import Profile from "./Components/Profile";
 import Balance from "./Components/Balance";
-import Transactions from "./Components/Transactions";
-import Chart from "./Components/Chart";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import AddTransactions from "./Components/AddTransactions";
+import Transaction from "./Components/Transaction";
 
 
 function App(): JSX.Element  {
@@ -20,11 +20,12 @@ function App(): JSX.Element  {
 <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/Balance" element={<Balance />} />
+          <Route path="/" element={<Dashboard /> } />
           <Route path="/AddTransactions" element={<AddTransactions />} />
-          <Route path="/Transactions" element={<Transactions />} />
-          <Route path="/Chart" element={<Chart />} />
+          <Route path="/Balance" element={<Balance />} />
+          <Route path="/TransactionList" element={<TransactionList />} />
+          <Route path="/Transaction" element={<Transaction />} />
+          <Route path="/Profile" element={<Profile />} />
         </Routes>
 
         <Footer />    

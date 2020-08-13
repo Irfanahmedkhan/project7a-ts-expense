@@ -1,4 +1,7 @@
 import React, { useContext } from 'react'
+// import CountUp from 'react-countup';
+import './IncomeExpense.css'
+
 import { GlobalContext } from '../Context/GlobalState';
 
 
@@ -16,17 +19,42 @@ export const IncomeExpense = () => {
         .filter((item: number) => item < 0)
         .reduce((acc: number, item: number) => (acc += item), 0))
         .toFixed(2);
+    
 
     return (
         <div className='inc-exp-container'>
-            <div>
-                <h4>Income</h4>
-                <p id='money-plus' className='money plus'>Rs. {income}</p>
+            <div className='income'>
+                <h5>Income : <span>
+                    {income}
+                    {/* <CountUp
+                        start={0}
+                        end=
+                        duration={2}
+                        separator=","
+                        decimals={0}
+                        decimal="."
+                        prefix="RS." /> */}
+                </span> </h5>
+                
+
             </div>
-            <div>
-                <h4>Expense</h4>
-                <p id='money-plus' className='money minus'>-Rs {expense}</p>
+
+            <div className='expense'>
+                <h5>Expense : <span>
+                    {expense}
+                    {/* <CountUp
+                        start={0}
+                        end=
+                        duration={2}
+                        separator=","
+                        decimals={0}
+                        decimal="."
+                        prefix="RS." /> */}
+                </span></h5>
+                
+                
             </div>
+
         </div>
     )
 }

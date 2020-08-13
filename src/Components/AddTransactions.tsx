@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-
+import './AddTransactions.css'
 import { GlobalContext } from "../Context/GlobalState";
 // import { TransType } from "../Utilities/Types";
 
@@ -20,18 +20,19 @@ const AddTransactions = () => {
 
 
   function onSubmitincome(e: React.MouseEvent<HTMLButtonElement>) {
+    
     e.preventDefault();
 
     const NewTransaction = {
       TransactionDetail,
-      TransactionAmount: +TransactionAmount,
+      TransactionAmount: TransactionAmount,
     };
     console.log(NewTransaction);
     
     setTransactionDetail("");
     setTransactionAmount(0);
 
-    addTransactions(TransactionDetail, TransactionAmount);
+    addTransactions(TransactionDetail, +TransactionAmount);
   }
 
 
@@ -55,9 +56,9 @@ const AddTransactions = () => {
 
 
   return (
-    <div className="">
+    <div className="addtransactions-container">
       <form>
-        <div className="Add-Transaction">
+        <div className="add-aransaction">
           <input
             type="text"
             placeholder="Add Transaction..."
@@ -88,9 +89,11 @@ const AddTransactions = () => {
         </div>
       </form>
 
-
-      <button className="incomesubmit" onClick={onSubmitincome}> Add Income </button>
-      <button className="expensesubmit" onClick={onSubmitexpense}>Add Expense</button>
+      <div className='buttons'>
+        <button className="incomesubmit" onClick={onSubmitincome}> Add Income </button>
+        <button className="expensesubmit" onClick={onSubmitexpense}>Add Expense</button>
+      </div>
+      
 
           
     </div>

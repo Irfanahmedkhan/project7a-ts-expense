@@ -1,17 +1,38 @@
 .navbar-container {
-    width: 90%;
-    height: 15%;
-    background-color: brown;
+    width: 100%;
+    min-height: 120px;
+}
+
+.title {
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(19, 57, 114);
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: white;
+    min-height: 25px;
 }
 
 .links {
+    margin: 0 auto;
+    padding: 0;
     display: flex;
     flex-direction: row;
-    
-    
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    align-items: center;
 }
 
-.link {
-    background-color: white;
-    margin: 5px;
+.dashboard-link, .addtransactions-link, .all-link, .profile-link {
+    width: 12%;
+    box-shadow: 1px 4px 3px 1px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: rgb(245, 245, 245);
+}
+
+img {
+    width: 100%;
 }

@@ -1,7 +1,59 @@
- .minus h2 {
-     color: red;
- }
 
- .plus h2 {
-     color: blue;
- }
+.transactionlist-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.plus, .minus {
+    display: flex;
+    height: 6vh;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.delete {
+    width: 10%;
+}
+
+#id-transactions img {
+    position: relative;
+    width: 7%;
+    cursor: pointer;
+    left: 0px;
+    
+    padding: 2px;
+    
+}
+
+.date {
+    color: gray;
+    font-size: 70%;
+}
+
+.minus {
+    background-color: rgb(235, 213, 203);
+    margin: 5px 10px 5px 10px;
+}
+
+.plus {
+    background-color: rgb(173, 241, 167);
+    margin: 5px 10px 5px 10px;
+}
+
+.textdate {
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+    align-items: left;
+    text-align: left;
+    align-content: left;
+    
+
+}
+
+.textdate h5{
+font-size: 18px;    
+}
