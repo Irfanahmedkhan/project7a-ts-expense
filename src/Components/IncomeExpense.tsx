@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-// import CountUp from 'react-countup';
+import CountUp from 'react-countup';
 import './IncomeExpense.css'
 
 import { GlobalContext } from '../Context/GlobalState';
@@ -25,15 +25,14 @@ export const IncomeExpense = () => {
         <div className='inc-exp-container'>
             <div className='income'>
                 <h5>Income : <span>
-                    {income}
-                    {/* <CountUp
+                    <CountUp
                         start={0}
-                        end=
+                        end=  {income}
                         duration={2}
                         separator=","
                         decimals={0}
                         decimal="."
-                        prefix="RS." /> */}
+                        prefix="RS." /> 
                 </span> </h5>
                 
 
@@ -41,15 +40,15 @@ export const IncomeExpense = () => {
 
             <div className='expense'>
                 <h5>Expense : <span>
-                    {expense}
-                    {/* <CountUp
+                    
+                    <CountUp
                         start={0}
-                        end=
+                        end= {expense}
                         duration={2}
                         separator=","
                         decimals={0}
                         decimal="."
-                        prefix="RS." /> */}
+                        prefix="RS." /> 
                 </span></h5>
                 
                 

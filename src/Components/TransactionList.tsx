@@ -4,9 +4,17 @@ import { GlobalContext } from "../Context/GlobalState";
 
 import del from "../images/de.png";
 
-// import { TransType } from '../Utilities/Types'
 
-const TransactionList: React.FC<any> = ({ Transactions }) => {
+
+type Props = {
+  TransactionDetail: string;
+  TransactionAmount: number;
+  id: number;
+  date: number;
+};
+
+
+const TransactionList: React.FC<Props | any> = ({ Transactions }) => {
   console.log(Transactions);
 
   const { removeTransaction } = useContext(GlobalContext);
@@ -15,6 +23,8 @@ const TransactionList: React.FC<any> = ({ Transactions }) => {
 
   return (
     <div className="transactionlist-container">
+
+      
       <div
         id="id-transactions"
         className={Transactions?.TransactionAmount > 0 ? "plus" : "minus"}

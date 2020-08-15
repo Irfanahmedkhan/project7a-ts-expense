@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
-import Dashboard from './Components/Dashboard'
+import Dashboard from './Components/Dashboard';
+import firebase from './firebase'
+
 import { Routes, Route } from "react-router-dom";
 import { GlobalContextProvider } from './Context/GlobalState';
 
@@ -14,6 +16,15 @@ import Transaction from "./Components/Transaction";
 
 
 function App(): JSX.Element  {
+
+  const messaging = firebase.messaging();
+  messaging.requestPermission().then(() => {
+    return messaging.getToken ()
+  }).then((token) => {
+    console.log('token', token);
+    
+  })
+
   return (
     <GlobalContextProvider>
 

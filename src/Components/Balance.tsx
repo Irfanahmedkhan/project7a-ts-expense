@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-// import CountUp from "react-countup";
+import CountUp from "react-countup";
 
 import { GlobalContext } from "../Context/GlobalState";
 import "./Balance.css";
@@ -24,16 +24,16 @@ function Balance() {
           <h3 >
             Balance :
             <span>
-              {total}
-              {/* <CountUp
+              
+              <CountUp
                 start={0}
-                end=
-                duration={2.0}
+                end= {total}
+                duration={2.5}
                 separator=","
                 decimals={0}
                 decimal="."
                 prefix="RS." 
-              />*/}
+              />
             </span>
           </h3>
         </div>

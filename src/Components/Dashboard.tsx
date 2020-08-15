@@ -12,7 +12,7 @@ import Chart from './Chart'
 
 function Dashboard() {
 
-  const [symptoms, setsymptoms] = useState(false);
+  const [model, setmodel] = useState(false);
 
   return (
       <div className="dashboard-container">
@@ -39,8 +39,8 @@ function Dashboard() {
 
         
         <Modal
-          isOpen={symptoms}
-          onRequestClose={() => setsymptoms(!true)}
+        isOpen={model}
+        onRequestClose={() => setmodel(!true)}
         ariaHideApp={false}
           style={{
             overlay: {
@@ -52,10 +52,10 @@ function Dashboard() {
             content: {
               width: '250px',
               position: "relative",
-              top: "250px",
+              top: "150px",
               left: "0px",
               
-              bottom: "100px",
+              bottom: "150px",
               border: "1px solid #ccc",
               background: "#39759E",
               overflow: "auto",
@@ -68,7 +68,7 @@ function Dashboard() {
         >
         <div>
           <button
-            onClick={() => setsymptoms(!true)}
+            onClick={() => setmodel(!true)}
             style={{
               color: 'white',
               position: 'relative',
@@ -88,7 +88,7 @@ function Dashboard() {
 
    
         <img src={add} alt='add' id='bttn' className='btn'
-          onClick={() => setsymptoms(true)}
+        onClick={() => setmodel(true)}
           style={{ backgroundColor: "#e73d1f" }} />
 
 

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../Context/GlobalState';
-import './Chart.css'
 import { Doughnut } from 'react-chartjs-2';
 
 

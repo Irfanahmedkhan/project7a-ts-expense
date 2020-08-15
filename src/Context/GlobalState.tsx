@@ -1,12 +1,5 @@
 import React, {createContext,useState } from 'react';
-// import { StateType } from '../Utilities/Types'
-import { v4 as uuidv4 } from "uuid";
-
-
-// const InitialState: any  = {
-
-//     transactions: [  ]    
-// };
+import { IDType, TransType} from '../Utilities/Types'
 
 
 export const GlobalContext = createContext<any>(!undefined);
@@ -17,19 +10,21 @@ export const GlobalContextProvider = ({ children}: any) : JSX.Element => {
 
 
 
-    const [Transactions, setTransactions] = useState<any>([])
+    const [Transactions, setTransactions] = useState<TransType[]>([])
 
    
 
     function addTransactions(TransactionDetail: string, TransactionAmount: number) {
-        setTransactions([...Transactions, { TransactionDetail, TransactionAmount, id: uuidv4(), date: new Date().getTime(), }]);
+        setTransactions([...Transactions, { TransactionDetail, TransactionAmount, id: new Date().getTime(), date: new Date().getTime(), }]);
     }
     
 
 
 
-    const removeTransaction = (id:number) => {
-        setTransactions(Transactions.filter((a: any) => a.id !== id));
+    const removeTransaction = (id: IDType) => {
+        setTransactions(Transactions.filter((TransactionId: IDType) => TransactionId.id !== id));
+        console.log(id);
+        
     };
 
 
