@@ -2,19 +2,38 @@ import React, {createContext,useState } from 'react';
 import { IDType, TransType} from '../Utilities/Types'
 
 
-export const GlobalContext = createContext<any>(!undefined);
+export const GlobalContext = createContext<TransType[]| any>([]);
 
 
 
-export const GlobalContextProvider = ({ children}: any) : JSX.Element => {
+const initial = [
+    {
+        TransactionAmount: 50000,
+        TransactionDetail: "Salary",
+        date: 1597648504311,
+        id: 1597648504311,
+    },
+    
+];
+
+type TType = {
+    TransactionAmount: number;
+    TransactionDetail: string;
+    date: number;
+    id: number;
+};
+
+export const GlobalContextProvider = (props: { children: React.ReactNode; }) => {
 
 
 
-    const [Transactions, setTransactions] = useState<TransType[]>([])
+    const [Transactions, setTransactions] = useState<TransType[]>(initial)
 
-   
 
-    function addTransactions(TransactionDetail: string, TransactionAmount: number) {
+
+
+    function addTransactions(NewTransaction: TransType) {
+        const { TransactionDetail, TransactionAmount} = NewTransaction
         setTransactions([...Transactions, { TransactionDetail, TransactionAmount, id: new Date().getTime(), date: new Date().getTime(), }]);
     }
     
@@ -32,7 +51,7 @@ export const GlobalContextProvider = ({ children}: any) : JSX.Element => {
 
         <GlobalContext.Provider value={{ addTransactions, Transactions, removeTransaction }}>
 
-            {children}
+            {props.children}
 
         </GlobalContext.Provider>
     )

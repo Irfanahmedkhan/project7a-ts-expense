@@ -8,7 +8,7 @@ import { GlobalContext } from '../Context/GlobalState';
 export const IncomeExpense = () => {
     const { Transactions } = useContext(GlobalContext);
 
-    const amounts = Transactions.map((Transactions: any)  => Transactions.TransactionAmount);
+    const amounts = Transactions.map((Transactions: { TransactionAmount: number})  => Transactions.TransactionAmount);
 
     const income = amounts
         .filter((item: number) => item > 0)

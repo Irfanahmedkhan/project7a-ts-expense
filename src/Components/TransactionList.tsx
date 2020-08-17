@@ -4,15 +4,12 @@ import { GlobalContext } from "../Context/GlobalState";
 
 import del from "../images/de.png";
 
-
-
 type Props = {
   TransactionDetail: string;
   TransactionAmount: number;
   id: number;
   date: number;
 };
-
 
 const TransactionList: React.FC<Props | any> = ({ Transactions }) => {
   console.log(Transactions);
@@ -23,8 +20,6 @@ const TransactionList: React.FC<Props | any> = ({ Transactions }) => {
 
   return (
     <div className="transactionlist-container">
-
-      
       <div
         id="id-transactions"
         className={Transactions?.TransactionAmount > 0 ? "plus" : "minus"}
@@ -36,7 +31,8 @@ const TransactionList: React.FC<Props | any> = ({ Transactions }) => {
         />
         <div className="textdate">
           <h5>{Transactions?.TransactionDetail}</h5>
-          <span className="date"> {new Date(Transactions?.date).toDateString()}{" "}
+          <span className="date">
+            {new Date(Transactions?.date).toDateString()}
           </span>
         </div>
 

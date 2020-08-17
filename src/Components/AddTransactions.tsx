@@ -31,14 +31,14 @@ const AddTransactions = () => {
     else {
       const NewTransaction = {
         TransactionDetail,
-        TransactionAmount: TransactionAmount,
+        TransactionAmount: +TransactionAmount,
       };
       console.log(NewTransaction);
 
       setTransactionDetail("");
       setTransactionAmount(0);
 
-      addTransactions(TransactionDetail, +TransactionAmount);
+      addTransactions(NewTransaction);
     }
 
     
@@ -55,18 +55,18 @@ const AddTransactions = () => {
 
     else {
 
-      const newExpTransaction = {
+      const NewTransaction = {
         TransactionDetail,
-        TransactionAmount: TransactionAmount
+        TransactionAmount: -TransactionAmount
       };
-      console.log(newExpTransaction);
+      console.log(NewTransaction);
 
 
 
       setTransactionDetail("");
       setTransactionAmount(0);
 
-      addTransactions(TransactionDetail, -TransactionAmount);
+      addTransactions(NewTransaction);
 
   }
 }
@@ -109,7 +109,7 @@ const AddTransactions = () => {
       <div className='buttons'>
         <button className="incomesubmit" onClick={onSubmitincome}> Add Income </button>
         <button className="expensesubmit" onClick={onSubmitexpense}>Add Expense</button>
-        <h5>*Transaction & Amount Field are Mandatory</h5>
+        <h5>*Transaction & Amount Fields are Mandatory</h5>
       </div>
       
 

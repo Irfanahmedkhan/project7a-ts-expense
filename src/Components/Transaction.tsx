@@ -1,28 +1,22 @@
-import React, {useContext} from 'react'
-import './Transactions.css'
-import TransactionList from './TransactionList'
-import { GlobalContext } from '../Context/GlobalState';
-import { TransType } from '../Utilities/Types'
-
-
+import React, { useContext } from "react";
+import "./Transactions.css";
+import TransactionList from "./TransactionList";
+import { GlobalContext } from "../Context/GlobalState";
+import { TransType } from "../Utilities/Types";
 
 function Transaction() {
+  const { Transactions } = useContext(GlobalContext);
 
-    const { Transactions } = useContext(GlobalContext)
 
-    console.log(Transactions);
-
-    return  (
-
-        <div className="transaction-container">
-            <ul>
-                {Transactions.map((Transactions: TransType, key: number ) => {
-                    return <TransactionList Transactions={Transactions} key={key} />;
-                })}
-            </ul>
-
-        </div>
-    )
+  return (
+    <div className="transaction-container">
+      <ul>
+        {Transactions.map((Transactions: TransType, key: number) => {
+          return <TransactionList Transactions={Transactions} key={key} />;
+        })}
+      </ul>
+    </div>
+  );
 }
 
-export default Transaction
+export default Transaction;

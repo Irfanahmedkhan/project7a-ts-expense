@@ -6,9 +6,9 @@ import firebase from './firebase'
 import { Routes, Route } from "react-router-dom";
 import { GlobalContextProvider } from './Context/GlobalState';
 
-import TransactionList from "./Components/TransactionList";
+// import TransactionList from "./Components/TransactionList";
 import Profile from "./Components/Profile";
-import Balance from "./Components/Balance";
+// import Balance from "./Components/Balance";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import AddTransactions from "./Components/AddTransactions";
@@ -33,8 +33,8 @@ function App(): JSX.Element  {
         <Routes>
           <Route path="/" element={<Dashboard /> } />
           <Route path="/AddTransactions" element={<AddTransactions />} />
-          <Route path="/Balance" element={<Balance />} />
-          <Route path="/TransactionList" element={<TransactionList />} />
+          {/* <Route path="/Balance" element={<Balance />} /> */}
+          {/* <Route path="/TransactionList" element={<TransactionList />} /> */}
           <Route path="/Transaction" element={<Transaction />} />
           <Route path="/Profile" element={<Profile />} />
         </Routes>

@@ -10,7 +10,7 @@ function Balance() {
 
 
   const amounts = Transactions.map(
-    (Transactions: any) => Transactions.TransactionAmount
+    (Transactions: { TransactionAmount: number; }) => Transactions.TransactionAmount
   );
 
   const total = amounts
